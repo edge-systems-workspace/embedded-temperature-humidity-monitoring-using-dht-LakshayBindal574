@@ -10,8 +10,7 @@ void setup() {
     dht.begin();
     Serial.println("DHT11 sensor initialized");
 }
-void loop()
-{
+void loop() {
     // write your code here
     float humidity=dht.readHumidity();
     float temperature=dht.readTemperature();
@@ -21,4 +20,8 @@ void loop()
         delay(5000);
         return;
     }
+    Serial.print("Temperature: ");
+    Serial.print(temperature);
+    Serial.println("Humidity: ");
+    Serial.print(humidity);
 }
